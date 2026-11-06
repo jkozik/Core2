@@ -6,6 +6,9 @@ green = working, yellow = degraded, red = failed. It retests every 2 minutes. To
 For each network it does: scan, connect, get an IP, make one tiny HTTP request, then look up the public IP and ISP.
 It also shows the battery level at the bottom right.
 
+It also sends a small UDP heartbeat so Zabbix can alert if the board stops working. The receiving side is in the companion
+repository [m5-core2-chk](https://github.com/jkozik/m5-core2-chk).
+
 ## What it monitors
 
 ```
